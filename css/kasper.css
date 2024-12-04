@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgba(15, 115, 143, 60%);
+    --line-color: #a2a2a2;
+
+    --bg-font: 3.7rem;
+    --p-font: 0.9rem;
+}
+
+
+/* Start Components */
+p {
+    color: var(--line-color);
+    line-height: 1.5;
+    font-size: var(--p-font);
+}
+
+
+.special-heading {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.special-heading h2 {
+    position: relative;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.special-heading h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    width: 6rem;
+    border-bottom: 1px solid black;
+    top: calc(100% + 1.5rem);
+}
+.special-heading h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #333;
+    top: calc(100% + 1.1rem);
+    
+}
+
+
+
+/* Start Header */
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+header .header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-container::after {
+    content: '';
+    position: absolute; 
+    height: 1px;
+    width: 100%;
+    background-color: var(--line-color);
+    bottom: 0;
+}
+
+header img{
+    height: 4rem;
+    color: white;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav .menu {
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    display: block;
+    position: relative;
+    color: white;
+    padding: 25px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.5s;
+    z-index: 2;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+header .form {
+    position: relative;
+    width: 2rem;
+    height: 1.5rem;
+    margin-left: 1.5rem;
+    border-left: 1px solid white;
+}
+header .form i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+    color: white;
+    margin: auto;
+}
+
+
+/* Start Landing */
+.landing {
+    position: relative;
+    padding: 0;
+    background-color: #1f2021;
+    background-image: url(../img/landing.png);
+    background-size: cover;
+    height: 100dvh;
+    
+}
+
+.landing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.landing .landing-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    translate: 0 -50%;
+    padding: 2rem;
+    background-color: var(--transparent-color);
+    color: white;
+}
+
+.landing h2 {
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.landing p {
+    font-size: 14px;
+}
+
+.landing .change-background {
+    position: absolute;
+    display: inline-block;
+    color: #DDD;
+    top: 60%;
+    translate: 0 -50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.landing .change-background:hover {
+    color: var(--main-color);
+}
+
+.landing .fa-angle-left {
+    left: 2rem;
+}
+.landing .fa-angle-left:hover {
+    transform: translateX(-5px);
+}
+
+.landing .fa-angle-right {
+    right: 2rem;
+}
+.landing .fa-angle-right:hover {
+    transform: translateX(5px);
+}
+
+.landing .bullets {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+}
+.landing .bullets li {
+    width: 1.3rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    height: 1.3rem;
+    margin-left: 5px;
+}
+.landing .bullets li.active {
+    background-color: var(--main-color)
+}
+
+
+/* Start Services */
+.services .service {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.services .service i {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.services .service .service-text h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+
+/* Start design */
+.design {
+    position: relative;
+    background-image: url(../img/design-background.png);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+.design::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.design .design-text {
+    align-self: center;
+    background-color: var(--transparent-color);
+    width: 100%;
+    padding: 4rem;
+    color: white;
+    z-index: 1;
+}
+
+.design h3 {
+    margin-bottom: 4rem;
+}
+
+.design li {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.design img {
+    display: none;
+}
+
+.design .design-text ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\e163';
+    font-weight: 900;
+    padding-right: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+    }
+    header nav .menu:hover + ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0;
+    }
+    header nav ul li a {
+        padding: 1rem !important;
+    }
+}
+@media (min-width: 768px) {
+    header nav .menu {
+        display: none;
+    }
+    .landing .landing-text {
+        width: 50%;
+    }
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, auto));
+        gap: 4rem;
+    }
+    .services .service {
+        text-align: left;
+        flex-direction: row;
+    }
+    .services .service i {
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
+    .design .design-text {
+        width: 50%;
+    }
+    .design img {
+        display: block;
+        height: 450px;
+        position: absolute;
+        bottom: -100px;
+        left: 5%;
+        opacity: 80%;
+    }
+}
+@media (max-width: 992px) {
+    header {
+        padding: 15px 5%;
+    }
+    section {
+        padding: 60px 5%;
+    }
+}
+@media (min-width: 992px) {
+    :root {
+        --bg-font: 4rem;
+        --p-font: 1rem;
+    } 
+    header {
+        padding: 18px 6%;
+    }
+    section {
+        padding: 70px 6%;
+    }
+}
+@media (min-width: 1200px) {
+    :root {
+        --bg-font: 4.5rem;
+        --p-font: 1.1rem;
+    }
+    header {
+        padding: 20px 10%;
+    }
+    section {
+        padding: 80px 10%;
+    }
+    .landing .landing-text {
+        padding: 4rem;
+    }
+}
